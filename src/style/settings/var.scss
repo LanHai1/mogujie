@@ -1,0 +1,24 @@
+/* Color */
+// 基础颜色 不区分类别 服务于其他类型的所有颜色
+$color-primary: #ff5777;
+$color-white: #fff;
+$color-black: #000;
+
+// 字体颜色
+$color-text-primary: #333;
+$color-text-secondary: #666;
+$color-text-tertiary: $color-white;
+$color-text-quaternary: $color-primary;
+
+// 边框颜色
+$border-color-base: #e5e5d5;
+
+// 背景颜色
+$background-color-primary: #f1f1f1;
+$background-color-secondary: $color-white;
+$background-color-tertiary: $color-primary;
+
+/* Border */
+$border-width-base: 1px !default;
+$border-style-base: solid !default;
+$border-base: $border-width-base $border-style-base $border-color-base !default;

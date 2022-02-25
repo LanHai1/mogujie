@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 容器与内容分离 -->
+    <!-- post中的meta-data -->
+    <div class="post">
+        <p class="metadata"><span>AAA</span><span>2022-01-01</span></p>
+    </div>
+    <!-- comment中的meta-data -->
+    <div class="comment">
+        <p class="metadata"><span>AAA</span><span>2022-01-01</span></p>
+    </div>
+    <!-- 
+        内容在不同容器中的展示是一致的 这样写css 会导致metadata不能进行复用
+        .post .metadata{ css code }
+        .comment .metadata{ css code } 
+
+        优化成 => 容器写容器的代码 内容写内容的代码
+        .post {css code }
+        .comment {css code }
+        .metadata{ css code }
+    -->
+
+    <!-- 结构(基础对象)与皮肤分离 -->
+    <div class="menu fix fix1"></div>
+    <!-- 
+        不用修改基础对象 可以多次新增多个皮肤对象进行修改
+        .menu{
+            color: green;
+            font-size: 14px;
+        }
+        .fix{
+            color: red;
+        }
+        .fix1{
+            font-size: 24px;
+        }
+     -->
+
+    <!-- BEM -->
+    <div class="menu">
+        <div class="menu__table menu__tab--style1">tab1</div>
+        <div class="menu__table menu__tab--style2">tab2</div>
+        <div class="menu__table menu__tab--style3">tab3</div>
+        <div class="menu__table menu__tab--style4">tab4</div>
+    </div>
+</body>
+
+</html>
