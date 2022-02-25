@@ -5,7 +5,7 @@ import {
 
 const components = {
     CCol: Col,
-    RRow: Row
+    CRow: Row
 }
 
 const install = (app) => {
