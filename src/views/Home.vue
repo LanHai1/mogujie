@@ -12,19 +12,30 @@
   <c-layout horizontal class="home__layout">
     <c-aside style="background: #ff5777">123</c-aside>
     <c-content style="background: #ff0">
-      <div style="height: 2000px">123123</div>
+      <div style="height: 2000px">
+        <p v-for="(item, index) in list" :key="index">{{ item }}</p>
+      </div>
     </c-content>
   </c-layout>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import { getUsers } from "@/api"
+import { onMounted, reactive, toRefs } from "vue"
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  setup() {
+    const data = reactive({
+      list: []
+    })
+    onMounted(() => {
+      getUsers().then(res => {
+        data.list = res.data
+      })
+    })
+    return {
+      ...toRefs(data),
+    }
   }
 }
 </script>

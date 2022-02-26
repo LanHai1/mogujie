@@ -8,5 +8,6 @@ import "normalize.css/normalize.css"
 import "@/style/index.scss"
 
 import mgjUI from '@/components/index.js'
+import '@/mock'; // mock数据
 
 createApp(App).use(mgjUI).use(store).use(router).mount('#app')
