@@ -1,0 +1,13 @@
+[circle] {
+    border-radius: 50%;
+}
+
+$i:2;
+
+@while $i<=20 {
+    [radius#{$i}] {
+        border-radius: $i + px;
+    }
+
+    $i:$i+2;
+}

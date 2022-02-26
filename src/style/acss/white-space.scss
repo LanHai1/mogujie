@@ -1,0 +1,44 @@
+/*
+// 2 => 60 双数
+[mt2]{
+    margin-top: 2px;
+}
+[ml2] => margin-left
+[mr2] => margin-right
+[mb2] => margin-bottom
+[ma2]{
+    margin: 2px;
+}
+*/
+
+
+$i: 2;
+
+@while $i<=60 {
+
+    @each $k,
+    $v in (l:left, r:right, t:top, b:bottom, a:all) {
+
+        @if $k==a {
+            [m#{$k}#{$i}] {
+                margin: $i+px;
+            }
+
+            [p#{$k}#{$i}] {
+                padding: $i+px;
+            }
+        }
+
+        @else {
+            [m#{$k}#{$i}] {
+                margin-#{$v}: $i+px;
+            }
+
+            [p#{$k}#{$i}] {
+                padding-#{$v}: $i+px;
+            }
+        }
+    }
+
+    $i: $i+2;
+}

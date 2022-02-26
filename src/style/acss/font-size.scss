@@ -1,0 +1,19 @@
+/*
+[fs12]{
+    font-size: 12px;
+}
+...
+[fs60]{
+    font-size:60px;
+}
+*/
+
+$i: 12;
+
+@while $i<=60 {
+    [fs#{$i}] {
+        font-size: $i+px;
+    }
+
+    $i: $i+2;
+}

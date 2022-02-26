@@ -1,0 +1,37 @@
+/*
+
+[font-primary] {
+    color: #333;
+}
+
+[font-secondary] {
+    color: #666;
+}
+
+[font-tertiary] {
+    color: #fff;
+}
+
+[font-quaternary] {
+    color: #ff5777;
+}
+
+*/
+
+// @each $title,
+// $color in (primary, #333),
+// (secondary, #666),
+// (tertiary, #fff),
+// (quaternary, #ff5777) {
+//     [font-#{$title}] {
+//         color: $color;
+//     }
+// }
+
+@each $title,
+$color in (primary: #333, secondary: #666, tertiary: #fff, quaternary: #ff5777) {
+    [font-#{$title}] {
+        color: $color;
+    }
+}
+

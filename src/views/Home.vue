@@ -1,13 +1,20 @@
 <template>
-  <div class="home">
-    <header>css架构</header>
-    <input type="text" value="123" />
-    <c-row>
-      <c-col span="8">span: 8</c-col>
-      <c-col span="8">span: 8</c-col>
-      <c-col span="8">span: 8</c-col>
-    </c-row>
-  </div>
+  <!-- <c-layout class="home__layout">
+    <c-header style="background: #ff5777">header</c-header>
+
+    <c-content style="background: #ff0">
+      <div style="height: 2000px">123123</div>
+    </c-content>
+
+    <c-footer style="background: #666">footer</c-footer>
+  </c-layout> -->
+
+  <c-layout horizontal class="home__layout">
+    <c-aside style="background: #ff5777">123</c-aside>
+    <c-content style="background: #ff0">
+      <div style="height: 2000px">123123</div>
+    </c-content>
+  </c-layout>
 </template>
 
 <script>
@@ -23,16 +30,9 @@ export default {
 </script>
 
 <style lang="scss">
-.home {
-  header {
-    width: 100px;
-    height: 100px;
-    background-color: gray;
-    color: $color-primary;
-    @include box-center(center, center);
-  }
-  input {
-    border: $border-base;
+@include b(home) {
+  @include e(layout) {
+    height: 100vh;
   }
 }
 </style>
