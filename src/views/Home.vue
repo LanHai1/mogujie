@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { getUsers } from "@/api"
+import { getRecommendatoryCategorys } from "@/api/mall.js"
 import { onMounted, reactive, toRefs } from "vue"
 export default {
   name: 'Home',
@@ -29,7 +29,7 @@ export default {
       list: []
     })
     onMounted(() => {
-      getUsers().then(res => {
+      getRecommendatoryCategorys().then(res => {
         data.list = res.data
       })
     })
