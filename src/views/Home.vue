@@ -11,7 +11,7 @@
 
   <c-layout horizontal class="home__layout">
     <c-aside style="background: #ff5777">123</c-aside>
-    <c-content style="background: #ff0">
+    <c-content>
       <div style="height: 2000px">
         <div class="home__box" bg-tertiary circle></div>
         <p v-for="(item, index) in list" :key="index" fs36>{{ item }}</p>
