@@ -13,7 +13,8 @@
     <c-aside style="background: #ff5777">123</c-aside>
     <c-content style="background: #ff0">
       <div style="height: 2000px">
-        <p v-for="(item, index) in list" :key="index">{{ item }}</p>
+        <div class="home__box" bg-tertiary circle></div>
+        <p v-for="(item, index) in list" :key="index" fs36>{{ item }}</p>
       </div>
     </c-content>
   </c-layout>
@@ -44,6 +45,10 @@ export default {
 @include b(home) {
   @include e(layout) {
     height: 100vh;
+  }
+  @include e(box) {
+    width: 50px;
+    height: 50px;
   }
 }
 </style>
