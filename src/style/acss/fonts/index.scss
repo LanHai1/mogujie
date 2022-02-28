@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'siyuan';
+  src: url('~@/style/acss/fonts/siyuan/siyuan.eot');
+  src:
+    url('~@/style/acss/fonts/siyuan/siyuan.eot?#font-spider') format('embedded-opentype'),
+    url('~@/style/acss/fonts/siyuan/siyuan.woff') format('woff'),
+    url('~@/style/acss/fonts/siyuan/siyuan.ttf') format('truetype'),
+    url('~@/style/acss/fonts/siyuan/siyuan.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'feichi';
+  src: url('~@/style/acss/fonts/feichi/feichi.eot');
+  src:
+    url('~@/style/acss/fonts/feichi/feichi.eot?#font-spider') format('embedded-opentype'),
+    url('~@/style/acss/fonts/feichi/feichi.woff') format('woff'),
+    url('~@/style/acss/fonts/feichi/feichi.ttf') format('truetype'),
+    url('~@/style/acss/fonts/feichi/feichi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tuzi';
+  src: url('~@/style/acss/fonts/tuzi/tuzi.eot');
+  src:
+    url('~@/style/acss/fonts/tuzi/tuzi.eot?#font-spider') format('embedded-opentype'),
+    url('~@/style/acss/fonts/tuzi/tuzi.woff') format('woff'),
+    url('~@/style/acss/fonts/tuzi/tuzi.ttf') format('truetype'),
+    url('~@/style/acss/fonts/tuzi/tuzi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@each $var in feichi,
+siyuan,
+tuzi {
+  [font-#{$var}] {
+    font-family: ''+$var;
+  }
+}
