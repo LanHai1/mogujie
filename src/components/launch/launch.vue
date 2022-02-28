@@ -10,7 +10,7 @@
       <div class="c-launch__download">
         <span>蘑菇街 总有高手帮你挑</span>
         <c-columns mt10>
-          <a>star</a>
+          <star theme="two-tone" size="12" :fill="['#f8e71c', '#f8e71c']" v-for="(item, index) in 5" :key="index" />
           <span ml20>超过2亿用户已下载</span>
         </c-columns>
       </div>
@@ -22,8 +22,10 @@
 </template>
 
 <script>
+import { Star } from '@icon-park/vue-next';
 export default {
-  name: "CLaunch"
+  name: "CLaunch",
+  components:{Star}
 }
 </script>
 
