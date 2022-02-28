@@ -1,0 +1,15 @@
+[oh] {
+    overflow: hidden;
+}
+
+@each $var in (c:center,
+    l:left,
+    r:right) {
+    [text-#{nth($var, 1)}] {
+        text-align: #{nth($var, 2)};
+    }
+}
+
+[lh1] {
+    line-height: 1;
+}

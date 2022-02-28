@@ -21,6 +21,9 @@ import {
 import {
     Launch
 } from './launch';
+import {
+    Search
+} from './search';
 
 
 const components = {
@@ -34,7 +37,8 @@ const components = {
     Columns,
     BoxSkin,
     BoxCenter,
-    Launch
+    Launch,
+    Search
 }
 
 const install = (app) => {

@@ -1,7 +1,7 @@
 <template>
   <c-layout class="home__layout">
     <c-header>
-      <c-launch></c-launch>
+      <!-- <c-launch></c-launch> -->
     </c-header>
 
     <c-content style="background: #ff0">
