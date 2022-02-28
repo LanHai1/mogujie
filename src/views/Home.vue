@@ -1,23 +1,25 @@
 <template>
-  <!-- <c-layout class="home__layout">
-    <c-header style="background: #ff5777">header</c-header>
+  <c-layout class="home__layout">
+    <c-header>
+      <c-launch></c-launch>
+    </c-header>
 
     <c-content style="background: #ff0">
-      <div style="height: 2000px">123123</div>
+      <p v-for="(item, index) in list" :key="index" fs12>{{ item }}</p>
     </c-content>
 
     <c-footer style="background: #666">footer</c-footer>
-  </c-layout> -->
+  </c-layout>
 
-  <c-layout horizontal class="home__layout">
+  <!-- <c-layout horizontal class="home__layout">
     <c-aside style="background: #ff5777">123</c-aside>
     <c-content>
       <div style="height: 2000px">
         <div class="home__box" bg-tertiary circle></div>
-        <p v-for="(item, index) in list" :key="index" fs36>{{ item }}</p>
+        <p v-for="(item, index) in list" :key="index" fs12>{{ item }}</p>
       </div>
     </c-content>
-  </c-layout>
+  </c-layout> -->
 </template>
 
 <script>

@@ -6,7 +6,7 @@ $i:2;
 
 @while $i<=20 {
     [radius#{$i}] {
-        border-radius: $i + px;
+        border-radius: $i + Px;
     }
 
     $i:$i+2;

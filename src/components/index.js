@@ -9,6 +9,19 @@ import {
     Footer,
     Aside
 } from './layout';
+import {
+    Columns
+} from './columns'
+import {
+    BoxSkin
+} from './box-skin/index.js';
+import {
+    BoxCenter
+} from './box-center';
+import {
+    Launch
+} from './launch';
+
 
 const components = {
     CCol: Col,
@@ -17,7 +30,11 @@ const components = {
     Header,
     Content,
     Footer,
-    Aside
+    Aside,
+    Columns,
+    BoxSkin,
+    BoxCenter,
+    Launch
 }
 
 const install = (app) => {
