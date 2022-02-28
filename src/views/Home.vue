@@ -5,7 +5,7 @@
     </c-header>
 
     <c-content style="background: #ff0">
-      <p v-for="(item, index) in list" :key="index" fs12>{{ item }}</p>
+      <!-- <p v-for="(item, index) in list" :key="index" fs12>{{ item }}</p> -->
     </c-content>
 
     <c-footer style="background: #666">footer</c-footer>
@@ -46,7 +46,6 @@ export default {
 <style lang="scss">
 @include b(home) {
   @include e(layout) {
-    height: 100vh;
   }
   @include e(box) {
     width: 50px;
