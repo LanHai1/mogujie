@@ -24,6 +24,9 @@ import {
 import {
     Search
 } from './search';
+import {
+    Magezine
+} from './magazine';
 
 
 const components = {
@@ -38,7 +41,8 @@ const components = {
     BoxSkin,
     BoxCenter,
     Launch,
-    Search
+    Search,
+    Magezine
 }
 
 const install = (app) => {

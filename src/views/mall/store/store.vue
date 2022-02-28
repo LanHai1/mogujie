@@ -8,16 +8,19 @@
     </c-header>
 
     <c-content class="home__content">
-      <!-- 轮播图 -->
-      <div class="swiper">
-        <div
-          class="swiper__item"
-          v-for="(item, index) in swipeList"
-          :key="index"
-        >
-          <img :src="item.image" />
-        </div>
-      </div>
+      <c-box-skin>
+        <c-row pt8 pb18 pl12 pr12>
+          <c-col :span="6" v-for="(item, index) in promotionList" :key="index">
+            <c-box-center>
+              <c-magazine :image="item.image" radius4 class="promotion">
+                <p text-c fs28 font-tertiary ma0 class="promotion__title">
+                  {{ item.title }}
+                </p>
+              </c-magazine>
+            </c-box-center>
+          </c-col>
+        </c-row>
+      </c-box-skin>
 
       <!-- 列表导航  -->
       <c-box-skin class="nav">
@@ -122,13 +125,12 @@
 // import CAvatar from '@/components/avatar';
 // import { Swipe, SwipeItem } from '@/components/swipe';
 import { onMounted, reactive, toRefs } from 'vue';
-import { getRecommendatoryCategorys, getBanners, getBrandVideos } from '@/api/mall';
+import { getRecommendatoryCategorys, getBanners, getBrandVideos, getPromotions } from '@/api/mall';
 import { getChats } from '@/api/me';
 import { useRouter } from 'vue-router';
 // import Toast from 'vant/lib/toast';
-
 export default {
-  name: "HomeMall",
+  name: "MallStore",
   setup() {
     const router = useRouter();
     const data = reactive({
@@ -139,6 +141,7 @@ export default {
         { list: [] },
         { list: [] }
       ],
+      promotionList: []
     })
 
     const goGoods = (id, title) => {
@@ -158,6 +161,10 @@ export default {
       //     forbidClick: true
       //   });
 
+      getPromotions().then((res) => {
+        data.promotionList = res.data;
+      })
+
       getRecommendatoryCategorys().then((res) => {
         data.categoryList = res.data;
       })
@@ -176,10 +183,10 @@ export default {
       {
         path: '/mall/home',
         text: '首页',
-        active: true
       }, {
         path: '/mall/store',
-        text: '商城'
+        text: '商城',
+        active: true
       }, {
         path: '/live/home',
         text: '直播'
@@ -204,15 +211,11 @@ export default {
   padding-bottom: 100px;
 }
 
-@include b(swiper) {
-  overflow: auto;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory;
-  @include e(item) {
-    display: inline-block;
+@include b(promotion) {
+  @include dimensions(165px);
+  @include e(title) {
     width: 100%;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
+    @include position(absolute, bottom 5px);
   }
 }
 
@@ -252,3 +255,4 @@ export default {
   }
 }
 </style>
+
