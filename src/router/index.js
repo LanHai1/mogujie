@@ -26,6 +26,11 @@ const routes = [{
     component: () => import( /* webpackChunkName: "fastBuy" */ '../views/promotion/fast-buy.vue')
   },
   {
+    path: '/live/home',
+    name: 'LiveHome',
+    component: () => import( /* webpackChunkName: "liveHome" */ '../views/live/home/home.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
