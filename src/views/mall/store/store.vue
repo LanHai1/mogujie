@@ -101,22 +101,7 @@
     </c-content>
 
     <c-footer>
-      <c-box-skin type="top">
-        <c-row>
-          <c-col
-            :span="24 / list.length"
-            v-for="(item, index) in list"
-            :key="index"
-          >
-            <c-box-center
-              class="main__footer"
-              fs32
-              :class="{ 'main__footer--active': item.active }"
-              >{{ item.text }}</c-box-center
-            >
-          </c-col>
-        </c-row>
-      </c-box-skin>
+      <c-footer-nav :list="list"></c-footer-nav>
     </c-footer>
   </c-layout>
 </template>

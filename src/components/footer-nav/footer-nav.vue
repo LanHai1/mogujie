@@ -6,12 +6,14 @@
         v-for="(item, index) in list"
         :key="index"
       >
-        <c-box-center
-          class="c__footer"
-          fs32
-          :class="{ 'c__footer--active': item.active }"
-          >{{ item.text }}</c-box-center
-        >
+        <c-box-center class="c__footer" fs32>
+          <router-link
+            :to="item['path']"
+            :class="{ 'c__footer--active': item.active }"
+          >
+            {{ item["text"] }}
+          </router-link>
+        </c-box-center>
       </c-col>
     </c-row>
   </c-box-skin>
@@ -35,8 +37,11 @@ export default {
 @include b(c) {
   @include e(footer) {
     height: 100px;
+    a {
+      color: #333333;
+    }
     @include m(active) {
-      color: $color-text-quaternary;
+      color: $color-text-quaternary !important;
     }
   }
 }
