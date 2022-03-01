@@ -27,6 +27,10 @@ import {
 import {
     Magezine
 } from './magazine';
+import {
+    FooterNav
+} from './footer-nav';
+
 
 
 const components = {
@@ -42,7 +46,8 @@ const components = {
     BoxCenter,
     Launch,
     Search,
-    Magezine
+    Magezine,
+    FooterNav
 }
 
 const install = (app) => {

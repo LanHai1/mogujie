@@ -13,3 +13,9 @@
 [lh1] {
     line-height: 1;
 }
+
+@for $v from 1 through 4 {
+    [flex#{$v}] {
+        flex: #{$v};
+    }
+}

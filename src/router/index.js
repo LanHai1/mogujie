@@ -21,6 +21,11 @@ const routes = [{
     component: () => import( /* webpackChunkName: "mallStore" */ '../views/mall/store/store.vue')
   },
   {
+    path: '/promotion/fast-buy',
+    name: 'FastBuy',
+    component: () => import( /* webpackChunkName: "fastBuy" */ '../views/promotion/fast-buy.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

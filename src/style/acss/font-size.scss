@@ -18,3 +18,8 @@ $i: 12;
     $i: $i+2;
 }
 
+@for $v from 1 through 8 {
+    [fontW#{$v*100}] {
+        font-weight: #{$v*100};
+    }
+}

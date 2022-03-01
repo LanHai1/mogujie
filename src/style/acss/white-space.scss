@@ -9,15 +9,23 @@
 [ma2]{
     margin: 2px;
 }
+[mh2]{
+    margin-left: 2px;
+    margin-right: 2px;
+}
+[mv2]{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 */
 
 
 $i: 0;
 
-@while $i<=60 {
+@while $i<=40 {
 
     @each $k,
-    $v in (l:left, r:right, t:top, b:bottom, a:all) {
+    $v in (l:left, r:right, t:top, b:bottom, a:all, h:horizontal, v:vertical) {
 
         @if $k==a {
             [m#{$k}#{$i}] {
@@ -26,6 +34,30 @@ $i: 0;
 
             [p#{$k}#{$i}] {
                 padding: $i+px;
+            }
+        }
+
+        @else if $k==h {
+            [m#{$k}#{$i}] {
+                margin-left: $i+px;
+                margin-right: $i+px;
+            }
+
+            [p#{$k}#{$i}] {
+                padding-left: $i+px;
+                padding-right: $i+px;
+            }
+        }
+
+        @else if $k==v {
+            [m#{$k}#{$i}] {
+                margin-top: $i+px;
+                margin-bottom: $i+px;
+            }
+
+            [p#{$k}#{$i}] {
+                padding-top: $i+px;
+                padding-bottom: $i+px;
             }
         }
 
